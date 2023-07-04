@@ -1,0 +1,16 @@
+colorout
+nvimcom
+BiocStyle
+knitr
+shiny
+shinyjs
+matrixStats
+MatrixGenerics
+BiocGenerics
+S4Vectors
+IRanges
+GenomeInfoDb
+GenomicRanges
+Biobase
+SummarizedExperiment
+SingleCellExperiment
