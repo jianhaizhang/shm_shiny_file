@@ -59,7 +59,7 @@ include_graphics('image/data.jpg')
 
 1: The tab for selecting datasets (red line: current selected tab).  
 2: The sub-tab for selecting datasets.  
-3: Select dataset source.  
+3: Select/upload a dataset and click "Spatial Heatmap" to see the plots.   
 4: Instructions for formatting bulk data are provided [here](){target="_blank"}.  
 <font style='color:blue'>[JH: links will be added later.]</font>  
 5: Instructions for formatting bulk and single-cell data are provided [here](){target="_blank"}.   
@@ -125,13 +125,11 @@ Although spatial heatmaps are powerful for visualization, only a few genes can b
 1: The tab displaying spatial heatmaps (red line: current selected tab).  
 2: The tab displaying data mining.   
 3: Step1: to obtain genes showing expression similarity with a query gene in 3.1, the assay matrix can be subsetted by using similarity measures in 3.2 and a cutoff value in 3.3. The subsetted matrix will be passed to Step2. If no subsetting is applied, the whole matrix will be used in Step2.   
-4: Step2: performing hierarchical clustering (4.4A), K-means clustering (4.4B), or network analysis (4.4C) on the subsetted matrix from step1 to identify a cluster of genes that showing highly similar expression patterns with the query.  
+4: Step2: Select one method from 4.1 and click "Run" (4.2), then a cluster or network module showing highly similar expression patterns with the query will be identified in the subsetted matrix from step1, and the results will be shown in 4.3A, 4.3B, or 4.3C respectively.  
+  
+  Network analysis is performed with the WGCNA algorithm [@Langfelder2008-sg; @Ravasz2002-db]. The objective is to identify the network module containin the query that can be visualized in form of network graphs. See more details [here](https://bioconductor.org/packages/devel/bioc/vignettes/spatialHeatmap/inst/doc/spatialHeatmap.html#43_Network_Graphs){target="_blank"}.  
 
- * Select a data mining method in 4.1, adjust corresponding settings in 4.2 if needed, and click 4.3, then the cluster containing the query gene (3.1) will be shown in 4.4.   
-
- * Network analysis is performed with the WGCNA algorithm [@Langfelder2008-sg; @Ravasz2002-db]. The objective is to identify the network module containin the query that can be visualized in form of network graphs. See more details [here](https://bioconductor.org/packages/devel/bioc/vignettes/spatialHeatmap/inst/doc/spatialHeatmap.html#43_Network_Graphs){target="_blank"}.  
-
-5: Step3: optional further network analysis on the cluster in 8. This tab is disabled until the cluster is shown in 8.   
+5: Step3: optional further network analysis on the cluster in 4.3A-C. This tab is disabled until the cluster is shown in 4.3A-C.    
 
 # Spatial Enrichment
 
@@ -166,6 +164,9 @@ The co-visualization module provides novel plotting functionalities designed to 
 
 Since there are often differences in naming conventions between cell group labels and tissue labels for the the first four methods, the user interface for cell labels obtained by these methods utilizes a ranslation map to create a bridge between the cell and tissue labels (Figure \@ref(fig:man).7.2-7.4). By contrast, the co-clustering method directly groups cells based on tissue labels, so the cell groups and tissues already have programatically identical labels. Due to this inherent alignment, the user interface for the co-clustering method is designed separately (Figure \@ref(fig:auto)).    
 
+
+<a name="ann"></a>
+
 ## Interace for annotation (or similar) labels  
 
 1: The tab for co-visualization (red line: current selected tab).   
@@ -189,6 +190,9 @@ include_graphics('image/man.jpg')
   * Fixed-by-group: cells of the same group and matching tissue features are assigned the same constant colors.   
 
 9.4-9.6: Single-cell and bulk data are visualized in an embedding plot (9.5) and a spatial heatmap (9.6) respectively. In 9.5, grey dots represent cells not matched with any tissue feature (7.4). All cell group labels that are matched with tissue features (7.4) are listed in 9.4, where options are provided to visualized all (default) or a single group in 9.5.  
+
+
+<a name="coclus"></a>
 
 ## Interface for co-clustering
 
