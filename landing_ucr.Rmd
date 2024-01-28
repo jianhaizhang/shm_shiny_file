@@ -1,0 +1,60 @@
+---
+title: "Welcome to UCR Spatial Heatmap"
+author: ""
+date: "Last update: `r format(Sys.time(), '%d %B, %Y')`"
+output:
+  BiocStyle::html_document:
+    css: landing.css
+    toc: false
+    toc_float:
+        collapsed: true
+        smooth_scroll: true
+    toc_depth: 4
+    fig_caption: yes
+    code_folding: hide
+    number_sections: true
+    self_contained: true
+fontsize: 14pt
+bibliography: bibtex.bib
+---
+
+```{css, echo=FALSE}
+pre code {
+white-space: pre !important;
+overflow-x: scroll !important;
+word-break: keep-all !important;
+word-wrap: initial !important;
+}
+```
+
+```{r global_options, include=FALSE}
+## ThG: chunk added to enable global knitr options. The below turns on
+## caching for faster vignette re-build during text editing.
+#knitr::opts_chunk$set(cache=TRUE)
+```
+<!-- 
+
+<style type="text/css">
+ .main-container { max-width: 1800px; margin-left: 5px; margin-right: auto; }
+</style>
+
+<style>body { text-align: justify }</style>  
+
+
+```{r css, echo = FALSE, results = 'asis'}
+BiocStyle::markdown(css.files=c('file/custom.css'))
+```
+
+-->
+
+```{r setup0, eval=TRUE, echo=FALSE, message=FALSE, warning=FALSE}
+library(knitr); opts_chunk$set(message=FALSE, warning=FALSE)
+```
+
+
+Check the [URL](https://tgirke.shinyapps.io/UCR_SHM/?_inputs_&ids=%22At1g01040,At1g01050%22&upl-fileIn=%22shoot_absrma_Mustroph%22&dat-normDat=%22None%22&shmAll-col.n=2&dat-scl=%22No%22&dat-log=%22No%22&shmAll-genCon=%22gene%22&dat-P=0&dat-A=0&dat-sig.max=10000&dat-sig.min=-10000&dat-CV2=10000){target='_blank'} for gene "At1g01040" and "At1g01050" in the dataset "Shoot (Absolute-RMA, Mustroph)".    
+
+<center><img src="image/landing_ucr.png" width='70%'/></center>
+
+
+

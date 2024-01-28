@@ -1,0 +1,58 @@
+---
+title: "spatialHeatmap Shiny App"
+author: ""
+date: "Last update: `r format(Sys.time(), '%d %B, %Y')`"
+output:
+  BiocStyle::html_document:
+    css: landing.css
+    toc: false
+    toc_float:
+        collapsed: true
+        smooth_scroll: true
+    toc_depth: 4
+    fig_caption: yes
+    code_folding: hide
+    number_sections: true
+    self_contained: true
+fontsize: 14pt
+bibliography: bibtex.bib
+---
+
+```{css, echo=FALSE}
+pre code {
+white-space: pre !important;
+overflow-x: scroll !important;
+word-break: keep-all !important;
+word-wrap: initial !important;
+}
+```
+
+```{r global_options, include=FALSE}
+## ThG: chunk added to enable global knitr options. The below turns on
+## caching for faster vignette re-build during text editing.
+#knitr::opts_chunk$set(cache=TRUE)
+```
+<!-- 
+
+<style type="text/css">
+ .main-container { max-width: 1800px; margin-left: 5px; margin-right: auto; }
+</style>
+
+<style>body { text-align: justify }</style>  
+
+
+```{r css, echo = FALSE, results = 'asis'}
+BiocStyle::markdown(css.files=c('file/custom.css'))
+```
+
+-->
+
+```{r setup0, eval=TRUE, echo=FALSE, message=FALSE, warning=FALSE}
+library(knitr); opts_chunk$set(message=FALSE, warning=FALSE)
+```
+
+The spatialHeatmap Shiny App is the graphical implementation of most functionalities in the [spatialHeatmap](https://bioconductor.org/packages/devel/bioc/html/spatialHeatmap.html){target="_blank"} software, which is specialized in visualizing spatial bulk and single cell assays in anatomical images.
+
+The functional modules in this App includes spatial heatmap, spatial enrichment, large-scale data mining, and co-visualization. Compared with command-line usage in R, the Shiny App includes a variety of convenience features that will appeal to experimentalists and users less familiar with R, such as selecting genes by clicking rows in interactive tables, customizing color schemes, full-screen display, downloading images, and providing pre-uploaded data sets for testing or demonstration purposes. The Shiny App can be used on both local computers as well as centralized server-based deployments (e.g., cloud-based or custom servers) to support both private or shared analyses.  
+
+

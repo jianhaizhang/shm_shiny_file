@@ -1,0 +1,61 @@
+---
+title: ""
+author: ""
+date: "Last update: `r format(Sys.time(), '%d %B, %Y')`"
+output:
+  BiocStyle::html_document:
+    css: landing.css
+    toc: false
+    toc_float:
+        collapsed: true
+        smooth_scroll: true
+    toc_depth: 4
+    fig_caption: yes
+    code_folding: hide
+    number_sections: true
+    self_contained: true
+fontsize: 14pt
+bibliography: bibtex.bib
+---
+
+<style>
+
+img {
+  padding: 0px 2px 0px 2px !important
+}
+</style>
+```{css, echo=FALSE}
+pre code {
+white-space: pre !important;
+overflow-x: scroll !important;
+word-break: keep-all !important;
+word-wrap: initial !important;
+}
+```
+
+```{r global_options, include=FALSE}
+## ThG: chunk added to enable global knitr options. The below turns on
+## caching for faster vignette re-build during text editing.
+#knitr::opts_chunk$set(cache=TRUE)
+```
+<!-- 
+
+<style type="text/css">
+ .main-container { max-width: 1800px; margin-left: 5px; margin-right: auto; }
+</style>
+
+<style>body { text-align: justify }</style>  
+
+
+```{r css, echo = FALSE, results = 'asis'}
+BiocStyle::markdown(css.files=c('file/custom.css'))
+```
+
+-->
+
+```{r setup0, eval=TRUE, echo=FALSE, message=FALSE, warning=FALSE}
+library(knitr); opts_chunk$set(message=FALSE, warning=FALSE)
+```
+<center>
+<img src="image/gallery.jpg" style="width:100%">
+</center>

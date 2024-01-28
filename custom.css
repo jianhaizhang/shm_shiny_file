@@ -5,6 +5,10 @@ li {
 }
 
 */
+#header button { 
+  display: none 
+}
+
 
 body {
   margin: 0px auto;
